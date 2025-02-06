@@ -20,3 +20,11 @@ or
 https://mlenddatasets.github.io/london_sounds/
 
 These are unzipped and stored in the repository in the folder 'Data/wav_files/'. This is a large file (3.48 GB) and therefore not part of this repo. A gitignore file is included to prevent commits with these files.
+
+PART A:
+
+The Python notebook called PartA_Pre-processing.ipynb contains details of the pre-processing of the data. Features are extracted, and saved to csv files for analysis.
+
+Part B:
+
+The Python notebook called PartB_Feature_Selection_Modelling.ipynb contains exploratory data analysis, feature selection, and finally modelling. A Random Forest model is selcted, and classifies indoor and outdoor sounds from this dataset with 63 % accuracy. 
