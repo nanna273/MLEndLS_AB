@@ -40,20 +40,20 @@ The raw audio data then undergoes a Short-Time Fourier Transform (STFT) to repre
 
 The below features are created by transformations in the librosa library. Domain understanding of the transformations is not part of this ML task, but may be investigated in a future update.
 
-| Feature name     |
-| ------------     |
-| Power, 1 feature |
-| Pitch mean, 1 feature |
-| Pitch std, 1 feature |
-| Voiced fraction, 1 feature |
-| spectral_contrast, 7 features  |
-| chroma_stft, 13 features  |
-| mfcc, 20 features 20-39 |
-| rms, 1 feature |
-| spectral_centroid, 1 feature |
-| spectral_bandwidth, 1 feature |
-| spectral_flatness, 1 feature |
-| spectral_rolloff, 1 feature |
+| Feature name     | Number of features  |
+| ------------     | ------------------- |
+| Power | 1 |
+| Pitch mean | 1 |
+| Pitch std | 1 |
+| Voiced fraction | 1 |
+| spectral_contrast | 7 |
+| chroma_stft | 13 |
+| mfcc | 20 |
+| rms | 1  |
+| spectral_centroid | 1 |
+| spectral_bandwidth | 1 |
+| spectral_flatness | 1 |
+| spectral_rolloff | 1 |
 
 ## Part B:  ##
 The Python notebook called *PartB_Feature_Selection_Modelling.ipynb* contains exploratory data analysis, feature selection, and finally modelling.
