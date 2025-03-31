@@ -22,7 +22,48 @@ https://mlenddatasets.github.io/london_sounds/
 These are unzipped and stored in the repository in the folder 'Data/wav_files/'. This is a large file (3.48 GB) and therefore not part of this repo. A gitignore file is included to prevent commits with these files.
 
 ## Part A:  ##
-The Python notebook called *PartA_Pre-processing.ipynb* contains details of the pre-processing of the data. Features are extracted, and saved to csv files for analysis.
+The Python notebook called *PartA_Pre-processing.ipynb* contains details of the pre-processing of the data. Features are extracted, and saved to csv files for analysis. An example of the first 5 rows of the tabulated data is shown below.
+
+| file_id  | area         | spot      |	in_out	  | Participant |	duration  |
+| -------- | ------------ | --------- | --------- | ----------- | --------  |
+| 0001.wav |	british     |	street	  | outdoor   |	S151	      | 9.59      |
+| 0002.wav |  kensington  |	dinosaur  |	indoor    |	S127        | 7.04      |
+| 0003.wav |	campus      |	square    |	outdoor  	| S18         |	8.85      |
+| 0004.wav |	kensington  |	hintze	  | indoor	  | S179        | 7.72      |
+| 0005.wav |	campu       |	square	  | outdoor	  | S176	      | 11.42     |
+
+An example of the raw audio data in the .wav files can be seen below.
+
+
+The raw audio data then undergoes a Short-Time Fourier Transform (STFT) to represent it in in the frequency domain, as shown below.
+
+
+The below features are created by transformations in the librosa library. Domain understanding of the transformations is not part of this ML task, but may be investigated in a future update.
+
+| Feature name     | Description of transformation |
+| ------------     | ----------------------------- |
+| Power, 1 feature |
+| Pitch mean, 1 feature |
+| Pitch std, 1 feature |
+| Voiced fraction, 1 feature |
+| spectral_contrast, 7 features  |
+| chroma_stft, 13 features  |
+| mfcc, 20 features 20-39 |
+| rms, 1 feature |
+| spectral_centroid, 1 feature |
+| spectral_bandwidth, 1 feature |
+| spectral_flatness, 1 feature |
+| spectral_rolloff, 1 feature |
 
 ## Part B:  ##
-The Python notebook called *PartB_Feature_Selection_Modelling.ipynb* contains exploratory data analysis, feature selection, and finally modelling. A Random Forest model is selected, and classifies indoor and outdoor sounds from this dataset with 63 % accuracy. 
+The Python notebook called *PartB_Feature_Selection_Modelling.ipynb* contains exploratory data analysis, feature selection, and finally modelling.
+
+### Exploratory data analysis ###
+
+
+### Feature selection ###
+
+
+### Modelling ###
+
+A Random Forest model is selected, and classifies indoor and outdoor sounds from this dataset with 63 % accuracy. 
