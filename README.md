@@ -33,15 +33,15 @@ The Python notebook called *PartA_Pre-processing.ipynb* contains details of the 
 | 0005.wav |	campu       |	square	  | outdoor	  | S176	      | 11.42     |
 
 An example of the raw audio data in the .wav files can be seen below.
-
+![Raw audio file representation](figure/1_raw_audio.png)
 
 The raw audio data then undergoes a Short-Time Fourier Transform (STFT) to represent it in in the frequency domain, as shown below.
-
+![STFT](figure/2_STFT.png)
 
 The below features are created by transformations in the librosa library. Domain understanding of the transformations is not part of this ML task, but may be investigated in a future update.
 
-| Feature name     | Description of transformation |
-| ------------     | ----------------------------- |
+| Feature name     |
+| ------------     |
 | Power, 1 feature |
 | Pitch mean, 1 feature |
 | Pitch std, 1 feature |
@@ -58,12 +58,9 @@ The below features are created by transformations in the librosa library. Domain
 ## Part B:  ##
 The Python notebook called *PartB_Feature_Selection_Modelling.ipynb* contains exploratory data analysis, feature selection, and finally modelling.
 
-### Exploratory data analysis ###
-
-
-### Feature selection ###
-
+### Exploratory data analysis and feature selection ###
+Boxplots and a PCA plotted to visually investigate features that might give good separation, and therefore be used for modelling. The PCA does not show much useful separation, but 5 features, corresponding to the MFCC transformation, do show some separation.
 
 ### Modelling ###
 
-A Random Forest model is selected, and classifies indoor and outdoor sounds from this dataset with 63 % accuracy. 
+SVM, random forest and logistic regression models are investigated, using a grid search to tune hyperparameters. The models are then validated with sklearn's cross_val_score function, using 5 folds. A Random Forest model is selected, and classifies indoor and outdoor sounds from this dataset with 63 % accuracy. 
